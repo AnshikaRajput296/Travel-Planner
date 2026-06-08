@@ -1,0 +1,77 @@
+{
+  "destination": "Tokyo",
+  "budget": 100000.0,
+  "days": 5,
+  "travelers": 2,
+  "preferences": [
+    "Food & Culinary"
+  ],
+  "travel_dates": "Summer 2025",
+  "flight_data": {
+    "destination": "Tokyo",
+    "airlines": [
+      "Air India",
+      "IndiGo",
+      "SpiceJet"
+    ],
+    "cost_per_person_inr": 90000,
+    "total_cost_inr": 180000,
+    "duration_hours": "8\u201312",
+    "recommended_booking": "Book 6\u20138 weeks in advance for best prices",
+    "best_travel_months": "Year-round (check local seasons)"
+  },
+  "flight_summary": "**Travel to Tokyo**\n\n1. **Recommended Airlines:**\n   - **Air India**: Pros (direct flights, comfortable seating), Cons (higher prices, \u20b960,000 - \u20b980,000 per person)\n   - **IndiGo**: Pros (affordable, \u20b945,000 - \u20b965,000 per person), Cons (layovers, less comfort)\n   - **SpiceJet**: Pros (budget-friendly, \u20b940,000 - \u20b960,000 per person), Cons (limited amenities)\n\n2. **Estimated Round-Trip Cost per Person:** \u20b945,000 - \u20b980,000\n\n3. **Best Time to Book and Travel:**\n   - Book 6-8 weeks in advance for best prices.\n   - Travel to Tokyo is recommended year-round, considering local seasons.\n\n4. **Flight Duration and Layover Tips:**\n   - Flight duration: 8-12 hours.\n   - Consider booking flights with shorter layovers (less than 2 hours) for convenience.\n\n5. **Baggage and Comfort Recommendations:**\n   - Check with airlines for baggage allowances (usually 20-25 kg).\n   - Opt for seats with more legroom (e.g., exit rows or premium economy) for comfort during long flights.",
+  "hotel_data": {
+    "destination": "Tokyo",
+    "nights": 5,
+    "rooms_needed": 1,
+    "options": [
+      {
+        "name": "Budget Inn Tokyo",
+        "price": 4050,
+        "rating": 3.2,
+        "type": "Budget"
+      },
+      {
+        "name": "Comfort Suites Tokyo",
+        "price": 6750,
+        "rating": 4.0,
+        "type": "Mid-range"
+      },
+      {
+        "name": "Grand Palace Tokyo",
+        "price": 16875,
+        "rating": 4.7,
+        "type": "Luxury"
+      }
+    ],
+    "recommended": {
+      "name": "Budget Inn Tokyo",
+      "price": 4050,
+      "rating": 3.2,
+      "type": "Budget"
+    },
+    "total_hotel_cost": 20250,
+    "booking_tips": "Book via Booking.com or Agoda for best deals. Cancel-free options recommended."
+  },
+  "hotel_summary": "For a 5-day culinary trip to Tokyo, consider the following options:\n\n1. Budget: Budget Inn Tokyo (\u20b94,050/night) - Located in a vibrant neighborhood with easy access to street food and local eateries.\n2. Mid-range: Comfort Suites Tokyo (\u20b96,750/night) - Best value option, offering a comfortable stay with a rating of 4.0 and proximity to popular restaurants.\n3. Luxury: Grand Palace Tokyo (\u20b916,875/night) - Unique Selling Point (USP): upscale amenities, exceptional service, and stunning city views.\n\nBooking tips: Book via Booking.com or Agoda for the best deals. Opt for cancel-free options to avoid any last-minute charges.\n\nNeighborhood recommendation: Shinjuku, a hub for foodies, with a wide range of restaurants, bars, and cafes. It's also close to the famous Tsukiji Fish Market and offers easy access to other parts of the city. \n\nThese options cater to different budgets while providing a great culinary experience in Tokyo. The total hotel cost for the 5-night stay would be \u20b920,250, as per the recommended option.",
+  "budget_breakdown": {
+    "total_budget": 100000.0,
+    "flights": 180000,
+    "accommodation": 20250,
+    "food": 20000,
+    "local_transport": 10000,
+    "activities": 16000,
+    "miscellaneous": 5000,
+    "total_estimated": 251250,
+    "remaining_budget": -151250,
+    "budget_status": "\u274c Over Budget",
+    "budget_utilization": 251.3,
+    "daily_average": 50250
+  },
+  "budget_summary": "**Budget Health Analysis**: The current total budget of \u20b9251,250 exceeds the allocated amount of \u20b9100,000, resulting in an \u274c Over Budget status. This indicates a significant shortfall, requiring adjustments to accommodate the trip.\n\n**Top 3 Money-Saving Tips**:\n1. Book flights in advance to reduce costs.\n2. Opt for affordable accommodation options like hostels or guesthouses.\n3. Use public transport and walk or cycle when possible.\n\n**Where to Splurge vs. Save**: Splurge on unique experiences like a traditional tea ceremony, and save on accommodation and food by choosing budget-friendly options.\n\n**Daily Budget Suggestion**: To stay within the allocated \u20b9100,000 for 5 days, the daily budget per person would be approximately \u20b910,000. This requires significant reductions in expenses, particularly in flights and accommodation. Consider budget airlines, shared accommodation, and affordable dining options to make the trip feasible.",
+  "itinerary": "Day 1: City Landmarks\n* Morning: Explore Shibuya Crossing and take a walk around the trendy Shibuya area (8:00-12:00)\n* Lunch: Try sushi at Sushi-no-Midori (Japanese, \u20b91,500 per person)\n* Afternoon: Visit the famous Tokyo Tower (13:00-17:00)\n* Evening: Enjoy a traditional Japanese dinner at Yakitori Alley (18:00-21:00)\n* Estimated daily spend: \u20b915,000\n* Local tip: Buy a Suica card for easy travel on public transport\n\nDay 2: Foodie Heaven\n* Morning: Visit the Tsukiji Outer Market for fresh seafood (8:00-12:00)\n* Lunch: Savor ramen at Ichiran (Japanese, \u20b9800 per person)\n* Afternoon: Explore the trendy Harajuku district and see the fashionable youth culture (13:00-17:00)\n* Evening: Dine at a Michelin-starred restaurant, Narisawa (18:00-21:00)\n* Estimated daily spend: \u20b920,000\n* Local tip: Try some fresh fruit at the Tsukiji Outer Market\n\nDay 3: Pop Culture\n* Morning: Visit the Ghibli Museum, dedicated to Studio Ghibli's anime films (8:00-12:00)\n* Lunch: Try some delicious udon noodles at Tsurutontan (Japanese, \u20b91,200 per person)\n* Afternoon: Explore the colorful streets of Akihabara, Tokyo's electronics and anime hub (13:00-17:00)\n* Evening: Enjoy a sumptuous dinner at an izakaya, Bungalow (18:00-21:00)\n* Estimated daily spend: \u20b918,000\n* Local tip: Purchase a prepaid SIM card for data access\n\nDay 4: Traditional Tokyo\n* Morning: Visit the Meiji Shrine, a serene Shinto shrine (8:00-12:00)\n* Lunch: Sample tempura at Tempura Kondo (Japanese, \u20b92,000 per person)\n* Afternoon: Stroll through the beautiful Imperial Palace East Garden (13:00-17:00)\n* Evening: Experience a traditional tea ceremony at the Happo-en Garden (18:00-21:00)\n* Estimated daily spend: \u20b912,000\n* Local tip: Remove your shoes before entering a traditional Japanese home\n\nDay 5: Market Exploration\n* Morning: Visit the Ameya Yokocho market for a unique shopping experience (8:00-12:00)\n* Lunch: Try some mouthwatering tonkatsu at Tonkatsu Maisen Aoyama Honten (Japanese, \u20b91,800 per person)\n* Afternoon: Explore the trendy Daikanyama district, known for its fashionable boutiques (13:00-17:00)\n* Evening: Farewell dinner at a robatayaki restaurant, Toriki (18:00-21:00)\n* Estimated daily spend: \u20b915,000\n* Local tip: Learn basic Japanese phrases to interact with the locals",
+  "recommendations": "\ud83c\udf7d\ufe0f TOP RESTAURANTS\n1. Sushi Saito, sushi, \u20b95,000/person, Omakase set.\n2. Narisawa, Japanese, \u20b93,000/person, Satoyama-inspired dishes.\n3. Tofuya Ukai, tofu, \u20b92,000/person, Tofu Katsu.\n4. Ichiran Shibuya, ramen, \u20b9500/person, Rich Tonkotsu Ramen.\n5. Yakiitori Alley, yakitori, \u20b91,500/person, Grilled chicken skewers.\n\n\ud83c\udfdb\ufe0f TOP ATTRACTIONS\n1. Tokyo Tower, iconic landmark, sunset, \u20b9800/person.\n2. Meiji Shrine, serene Shinto shrine, morning, free.\n3. Tsukiji Outer Market, fresh seafood, early morning, free.\n4. Asakusa Kannon Temple, ancient Buddhist temple, afternoon, \u20b9500/person.\n5. Shibuya Crossing, busiest intersection, evening, free.\n\n\ud83d\udc8e HIDDEN GEMS\n1. Nezu Museum's Garden, peaceful oasis in Omotesando.\n2. Kappabashi Dougu Street, quirky kitchen supply street.\n3. Shinjuku Gyoen National Garden, beautiful park with gardens.\n\n\ud83d\udca1 INSIDER TRAVEL TIPS\n1. Learn basic Japanese phrases to show respect.\n2. Carry cash, as not all places accept credit cards.\n3. Use a prepaid IC card for public transport.\n4. Remove shoes before entering temples or homes.\n5. Be mindful of peak travel hours to avoid crowds.\n\n\ud83d\udecd\ufe0f SHOPPING SPOTS\n1. Ameya Yokocho, try local street food and snacks, \u20b9500-\u20b91,000.\n2. Ginza District, luxury shopping and high-end brands, \u20b95,000-\u20b910,000.\n3. Shimokitazawa, vintage clothing and second-hand shops, \u20b91,000-\u20b93,000.",
+  "error": null,
+  "status": "completed"
+}

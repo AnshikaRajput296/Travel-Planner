@@ -1,0 +1,77 @@
+{
+  "destination": "Paris",
+  "budget": 500000.0,
+  "days": 5,
+  "travelers": 2,
+  "preferences": [
+    "Food & Culinary"
+  ],
+  "travel_dates": "December 2026",
+  "flight_data": {
+    "destination": "Paris",
+    "airlines": [
+      "Air India",
+      "IndiGo",
+      "SpiceJet"
+    ],
+    "cost_per_person_inr": 84000,
+    "total_cost_inr": 168000,
+    "duration_hours": "8\u201312",
+    "recommended_booking": "Book 6\u20138 weeks in advance for best prices",
+    "best_travel_months": "Year-round (check local seasons)"
+  },
+  "flight_summary": "**Travel Recommendations for Paris**\n\n1. **Airlines**: \n   - Air India: Pros (direct flights, convenient schedules), Cons (higher costs)\n   - IndiGo: Pros (affordable, frequent flights), Cons (layovers, limited in-flight services)\n   - SpiceJet: Pros (budget-friendly), Cons (limited international routes, less legroom)\n\n2. **Estimated Round-Trip Cost**: \u20b984,000 per person\n\n3. **Best Time to Book and Travel**: Book 6-8 weeks in advance for best prices. Travel to Paris is recommended year-round, considering local seasons.\n\n4. **Flight Duration and Layover Tips**: Flights from India to Paris take 8-12 hours. Consider direct or shorter layover flights for convenience and minimal jet lag.\n\n5. **Baggage and Comfort**: Check with airlines for baggage allowances (typically 20-25 kg). For comfort, consider booking seats with more legroom (e.g., Air India's premium economy) and pack essentials like travel adapters and comfortable clothing.",
+  "hotel_data": {
+    "destination": "Paris",
+    "nights": 5,
+    "rooms_needed": 1,
+    "options": [
+      {
+        "name": "Budget Inn Paris",
+        "price": 5850,
+        "rating": 3.2,
+        "type": "Budget"
+      },
+      {
+        "name": "Comfort Suites Paris",
+        "price": 9750,
+        "rating": 4.0,
+        "type": "Mid-range"
+      },
+      {
+        "name": "Grand Palace Paris",
+        "price": 24375,
+        "rating": 4.7,
+        "type": "Luxury"
+      }
+    ],
+    "recommended": {
+      "name": "Comfort Suites Paris",
+      "price": 9750,
+      "rating": 4.0,
+      "type": "Mid-range"
+    },
+    "total_hotel_cost": 48750,
+    "booking_tips": "Book via Booking.com or Agoda for best deals. Cancel-free options recommended."
+  },
+  "hotel_summary": "For a 5-day culinary trip to Paris, consider the following options:\n\n1. **Budget Option**: Budget Inn Paris (\u20b95,850/night) - Located near the Gare du Nord, this hotel offers easy access to the city's culinary scene, including the historic Montmartre neighborhood.\n\n2. **Mid-range Option**: Comfort Suites Paris (\u20b99,750/night) - This hotel provides the best value, with a 4.0 rating and comfortable rooms. It's an ideal choice for foodies, with many restaurants and cafes nearby.\n\n3. **Luxury Option**: Grand Palace Paris (\u20b924,375/night) - This luxury hotel boasts a 4.7 rating and offers an exceptional culinary experience, with a Michelin-starred restaurant on site.\n\n4. **Booking Tips**: Book via Booking.com or Agoda for the best deals. Opt for cancel-free options to avoid any last-minute penalties.\n\n5. **Neighborhood Recommendation**: Stay in the 1st or 4th arrondissement for easy access to famous food markets like Le Louvre and Rue de Rivoli, and iconic restaurants like Le Comptoir du Relais and Breizh Caf\u00e9. These neighborhoods offer a mix of culinary delights, historic landmarks, and charming streets to explore.",
+  "budget_breakdown": {
+    "total_budget": 500000.0,
+    "flights": 168000,
+    "accommodation": 48750,
+    "food": 40000,
+    "local_transport": 10000,
+    "activities": 16000,
+    "miscellaneous": 25000,
+    "total_estimated": 307750,
+    "remaining_budget": 192250,
+    "budget_status": "\u2705 Under Budget",
+    "budget_utilization": 61.6,
+    "daily_average": 61550
+  },
+  "budget_summary": "**1. Budget health analysis**: The current total budget is \u20b9307,750, which is under the allocated \u20b9500,000. The budget health status is \u2705 Under Budget, with a surplus of \u20b9192,250.\n\n**2. Top 3 money-saving tips**:\n* Buy a Paris Museum Pass for free entry to attractions.\n* Use public transport instead of taxis.\n* Eat at cafes or street food stalls instead of restaurants.\n\n**3. Where to splurge vs. save**: Splurge on a Seine River cruise or a Michelin-starred meal, and save on accommodation by opting for a budget-friendly hotel or hostel.\n\n**4. Daily budget suggestion per person**: \u20b95,077 (total daily budget: \u20b910,154, divided by 2 travelers). This amount should cover all expenses, including food, transport, and activities, with some flexibility for splurges.",
+  "itinerary": "Day 1: City Landmarks\n* Morning: Explore the Eiffel Tower and surrounding gardens (8:00-12:00)\n* Lunch: Le Relais de L'Entrec\u00f4te (French) - try their famous steak\n* Afternoon: Visit the Louvre Museum (13:00-17:00)\n* Evening: Dinner at Le Grand Vefour (18:00-21:00) - historic French cuisine\n* Estimated daily spend: \u20b980,000\n* Local tip: Buy a Paris Museum Pass for priority entry to top attractions\n\nDay 2: Food Markets\n* Morning: Visit the March\u00e9 aux Puces de Saint-Ouen (8:00-12:00) for food and antiques\n* Lunch: Le Comptoir du Relais (French bistro) - classic dishes\n* Afternoon: Explore the Latin Quarter's food shops and cafes (13:00-17:00)\n* Evening: Wine and cheese tasting at La Maison Kayser (18:00-21:00)\n* Estimated daily spend: \u20b960,000\n* Local tip: Try a classic French baguette at a local bakery\n\nDay 3: Culinary Delights\n* Morning: Take a cooking class at Le Food Market (8:00-12:00) - learn French patisserie\n* Lunch: Breizh Caf\u00e9 (French-Japanese crepes) - unique flavors\n* Afternoon: Visit the Mus\u00e9e de la Vie Romantique (13:00-17:00) - art and history\n* Evening: Dinner at Septime (18:00-21:00) - Michelin-starred restaurant\n* Estimated daily spend: \u20b9100,000\n* Local tip: Make reservations for popular restaurants well in advance\n\nDay 4: Montmartre\n* Morning: Explore the charming streets of Montmartre (8:00-12:00) - artist studios and cafes\n* Lunch: Le Consulat (French) - historic restaurant with a view\n* Afternoon: Visit the Sacr\u00e9-C\u0153ur Basilica (13:00-17:00) - stunning views\n* Evening: Dinner and cabaret at Moulin Rouge (18:00-21:00)\n* Estimated daily spend: \u20b9120,000\n* Local tip: Avoid touristy areas for dinner and opt for local eateries\n\nDay 5: Palace of Versailles\n* Morning: Take a day trip to the Palace of Versailles (8:00-12:00) - guided tour\n* Lunch: La Petite Venise (French) - elegant restaurant in the palace\n* Afternoon: Explore the palace gardens and fountain show (13:00-17:00)\n* Evening: Return to Paris and enjoy a farewell dinner at Le Grand Colbert (18:00-21:00)\n* Estimated daily spend: \u20b9140,000\n* Local tip: Book tickets to Versailles in advance to avoid long queues",
+  "recommendations": "\ud83c\udf7d\ufe0f TOP RESTAURANTS\n1. Le Comptoir du Relais, French, \u20b92,500/person, Steak Tartare.\n2. Septime, Contemporary, \u20b94,000/person, seasonal surprise menu.\n3. Breizh Caf\u00e9, Creperie, \u20b9800/person, savory buckwheat crepes.\n4. Le Grand Vefour, Haute Cuisine, \u20b93,500/person, Foie Gras.\n5. Holybelly, Caf\u00e9, \u20b9500/person, expertly brewed coffee and pastries.\n\n\ud83c\udfdb\ufe0f TOP ATTRACTIONS\n1. The Eiffel Tower, iconic landmark, sunset, \u20b91,200/person.\n2. Louvre Museum, historic art collection, morning, \u20b91,800/person.\n3. Notre-Dame Cathedral, beautiful architecture, afternoon, free.\n4. Montmartre, charming neighborhood, evening, free.\n5. Mus\u00e9e d'Orsay, Impressionist art, late morning, \u20b91,200/person.\n\n\ud83d\udc8e HIDDEN GEMS\n1. Le Jardin des Plantes, a peaceful botanical garden.\n2. Canal Saint-Martin, a charming waterway with street performers.\n3. Rue des Thermopyles, a quaint street with unique shops.\n\n\ud83d\udca1 INSIDER TRAVEL TIPS\n1. Learn basic French phrases to show respect for the culture.\n2. Buy a Paris Museum Pass for skip-the-line entry to attractions.\n3. Be mindful of pickpocketing in crowded areas.\n4. Validate your metro ticket to avoid fines.\n5. Tip 5-10% in restaurants and cafes.\n\n\ud83d\udecd\ufe0f SHOPPING SPOTS\n1. Galeries Lafayette, upscale department store, try the rooftop view.\n2. March\u00e9 aux Puces de Saint-Ouen, flea market, vintage items and souvenirs.\n3. Rue Cler, charming street market, fresh produce and flowers, negotiate prices for bulk purchases.",
+  "error": null,
+  "status": "completed"
+}
