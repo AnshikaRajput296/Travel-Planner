@@ -1,0 +1,80 @@
+{
+  "source": "Paris",
+  "destination": "Japan",
+  "budget": 400000.0,
+  "days": 5,
+  "travelers": 2,
+  "preferences": [
+    "Luxury",
+    "Family",
+    "Shopping"
+  ],
+  "travel_dates": "December 2026",
+  "flight_data": {
+    "destination": "Japan",
+    "airlines": [
+      "Air India",
+      "Japan Airlines",
+      "ANA"
+    ],
+    "cost_per_person_inr": 90000,
+    "total_cost_inr": 180000,
+    "duration_hours": "7\u20139",
+    "recommended_booking": "Book 6\u20138 weeks in advance for best prices",
+    "best_travel_months": "March\u2013April (Cherry Blossom) / Oct\u2013Nov"
+  },
+  "flight_summary": "**Travel Recommendations from Paris to Japan**\n\n1. **Airlines**: \n   - Air India: Pros (affordable), Cons (limited amenities)\n   - Japan Airlines: Pros (excellent service), Cons (higher cost)\n   - ANA: Pros (comfortable seats), Cons (variable prices)\n\n2. **Estimated Cost**: \u20b990,000 per person (round-trip), totaling \u20b9180,000 for 2 travelers.\n\n3. **Best Time to Book and Travel**: Book 6-8 weeks in advance. Best travel months are March-April (Cherry Blossom) and Oct-Nov.\n\n4. **Flight Duration and Layover Tips**: Flights take 7-9 hours. Consider booking flights with shorter layovers for convenience.\n\n5. **Baggage and Comfort**: Check airline baggage policies. For comfort, consider upgrading to premium economy or booking seats with more legroom, especially on long-haul flights.",
+  "hotel_data": {
+    "destination": "Japan",
+    "nights": 5,
+    "rooms_needed": 1,
+    "options": [
+      {
+        "name": "Budget Inn Japan",
+        "price": 4050,
+        "rating": 3.2,
+        "type": "Budget"
+      },
+      {
+        "name": "Comfort Suites Japan",
+        "price": 6750,
+        "rating": 4.0,
+        "type": "Mid-range"
+      },
+      {
+        "name": "Grand Palace Japan",
+        "price": 16875,
+        "rating": 4.7,
+        "type": "Luxury"
+      }
+    ],
+    "recommended": {
+      "name": "Comfort Suites Japan",
+      "price": 6750,
+      "rating": 4.0,
+      "type": "Mid-range"
+    },
+    "total_hotel_cost": 33750,
+    "booking_tips": "Book via Booking.com or Agoda for best deals. Cancel-free options recommended."
+  },
+  "hotel_summary": "For a 5-day trip to Japan, I recommend the following options:\n\n1. Budget option: Budget Inn Japan (\u20b94,050/night) - Located in a convenient area with easy access to public transportation, this budget-friendly option is ideal for those who want to explore Japan without breaking the bank.\n\n2. Mid-range option: Comfort Suites Japan (\u20b96,750/night) - Offering the best value, this mid-range hotel provides comfortable rooms and a range of amenities, making it perfect for families.\n\n3. Luxury option: Grand Palace Japan (\u20b916,875/night) - This luxury hotel boasts an exceptional rating of 4.7 and offers unparalleled service, amenities, and accommodations, making it the ultimate choice for a luxurious stay in Japan.\n\n4. Booking tips: Book via Booking.com or Agoda for the best deals, and consider cancel-free options for flexibility.\n\n5. Neighborhood recommendation: For a luxurious shopping experience, consider staying in the Shinjuku or Shibuya areas, which offer a range of high-end shopping malls, department stores, and boutique shops. These neighborhoods also provide easy access to public transportation, making it easy to explore the rest of Tokyo.",
+  "budget_breakdown": {
+    "total_budget": 400000.0,
+    "flights": 180000,
+    "accommodation": 33750,
+    "food": 48000,
+    "local_transport": 15000,
+    "activities": 43200,
+    "miscellaneous": 20000,
+    "total_estimated": 339950,
+    "remaining_budget": 60050,
+    "budget_status": "\u2705 Under Budget",
+    "budget_utilization": 85.0,
+    "daily_average": 67990
+  },
+  "budget_summary": "**Budget Health Analysis**: The current total budget is \u20b9339,950, which is \u20b960,050 under the allocated \u20b9400,000. The budget status is \u2705 Under Budget.\n\n**Top 3 Money-Saving Tips**:\n1. Use public transport and purchase a prepaid card for convenience.\n2. Try local street food and eat at affordable restaurants.\n3. Visit free or low-cost attractions, such as temples and parks.\n\n**Where to Splurge vs. Save**: Splurge on unique experiences like a traditional tea ceremony or a sumo wrestling tournament. Save on accommodation by opting for budget-friendly hotels or hostels.\n\n**Daily Budget Suggestion**: The total daily budget for 2 travelers is \u20b967,990 (\u20b9339,950 / 5 days). Per person, the daily budget is approximately \u20b933,995. Allocate accordingly: flights (\u20b936,000 / 5 days = \u20b97,200 per day), accommodation (\u20b96,750 / 5 days = \u20b91,350 per day), food (\u20b99,600 / 5 days = \u20b91,920 per day), transport (\u20b93,000 / 5 days = \u20b9600 per day), activities (\u20b98,640 / 5 days = \u20b91,728 per day), and misc (\u20b94,000 / 5 days = \u20b9800 per day).",
+  "itinerary": "Day 1: City Landmarks\n* Morning: Visit Tokyo's iconic Shibuya Crossing and take a stroll around the trendy Shibuya area (8:00-12:00)\n* Lunch: Sushi at Sushi Saito (Japanese), \u20b95,000 per person\n* Afternoon: Explore the Meiji Shrine and Yoyogi Park (13:00-17:00)\n* Evening: Enjoy a traditional Japanese dinner at Narisawa (18:00-21:00)\n* Estimated daily spend: \u20b940,000\n* Local tip: Arrive early at Shibuya Crossing to avoid crowds\n\nDay 2: Luxury Shopping\n* Morning: Shop at Ginza's high-end boutiques, including Chanel and Louis Vuitton (8:00-12:00)\n* Lunch: Try Tonkatsu at Tonkatsu Maisen Aoyama Honten (Japanese), \u20b93,000 per person\n* Afternoon: Visit the trendy Harajuku district and see the fashionable youth culture (13:00-17:00)\n* Evening: Dine at L'Effervescence (French-Japanese), \u20b98,000 per person\n* Estimated daily spend: \u20b960,000\n* Local tip: Look for hidden alleys in Ginza for unique shopping experiences\n\nDay 3: Family Fun\n* Morning: Visit the Tokyo Disneyland or DisneySea theme parks (8:00-12:00)\n* Lunch: Enjoy theme park food, such as churros and popcorn (American), \u20b92,000 per person\n* Afternoon: Explore the teamLab Borderless digital art museum (13:00-17:00)\n* Evening: Have dinner at the theme park or nearby restaurant (18:00-21:00)\n* Estimated daily spend: \u20b950,000\n* Local tip: Book theme park tickets in advance to avoid long lines\n\nDay 4: Cultural Experiences\n* Morning: Attend a traditional Japanese tea ceremony (8:00-12:00)\n* Lunch: Savor tempura at Tempura Kondo (Japanese), \u20b94,000 per person\n* Afternoon: Visit the Tokyo National Museum to learn about Japanese history and art (13:00-17:00)\n* Evening: Enjoy a sumo wrestling tournament at the Ryogoku Kokugikan (18:00-21:00)\n* Estimated daily spend: \u20b945,000\n* Local tip: Respect the traditional tea ceremony by dressing modestly\n\nDay 5: Departure\n* Morning: Last-minute shopping at the Tokyo Station area (8:00-12:00)\n* Lunch: Try ramen at Ichiran Ramen (Japanese), \u20b91,500 per person\n* Afternoon: Depart for the airport and head back home (13:00-17:00)\n* Evening: Reflect on the amazing experiences in Japan\n* Estimated daily spend: \u20b930,000\n* Local tip: Purchase last-minute souvenirs at the airport for convenience",
+  "recommendations": "\ud83c\udf7d\ufe0f TOP RESTAURANTS:\n1. Sushi Saito, Japanese, \u20b95,000-\u20b910,000, Omakase.\n2. Narisawa, Japanese-French, \u20b93,000-\u20b96,000, Satoyama cuisine.\n3. L'Effervescence, French, \u20b94,000-\u20b98,000, Seasonal tasting menu.\n4. Kyubey Ginza, Sushi, \u20b92,000-\u20b94,000, Classic Edomae-style sushi.\n5. Nihonryori Ryugin, Japanese, \u20b93,000-\u20b96,000, Kaiseki cuisine.\n\n\ud83c\udfdb\ufe0f TOP ATTRACTIONS:\n1. Tokyo Skytree, Panoramic views, sunset, \u20b91,200 entry fee.\n2. Fushimi Inari Shrine, Thousand vermillion gates, early morning, free.\n3. Meiji Shrine, Serene forested area, afternoon, free.\n4. Tsukiji Outer Market, Fresh sushi and seafood, morning, free.\n5. Osaka Castle, Historic landmark, daytime, \u20b9600 entry fee.\n\n\ud83d\udc8e HIDDEN GEMS:\n1. Nezu Museum's garden, serene oasis in Tokyo.\n2. Kawaii Monster Cafe, quirky and bizarre experience.\n3. Arashiyama Bamboo Grove, tranquil and picturesque.\n\n\ud83d\udca1 INSIDER TRAVEL TIPS:\n1. Learn basic Japanese phrases, like \"konnichiwa\" (hello).\n2. Purchase a Suica or Pasmo card for easy travel.\n3. Remove shoes before entering homes or traditional restaurants.\n4. Respect queueing and personal space in crowded areas.\n5. Be mindful of tattoo etiquette, covering them when necessary.\n\n\ud83d\udecd\ufe0f SHOPPING SPOTS:\n1. Ginza, luxury brands and high-end shopping, no negotiation.\n2. Shibuya 109, trendy fashion and souvenirs, fixed prices.\n3. Ameya Yokocho, traditional market with snacks and souvenirs, negotiate prices.",
+  "error": null,
+  "status": "completed"
+}

@@ -1,14 +1,27 @@
 """
 graph/travel_graph.py
 ----------------------
-LangGraph StateGraph that orchestrates all travel agents in sequence.
+LangGraph StateGraph that orchestrates all travel agents.
 
 Workflow:
-  START → flight_agent → hotel_agent → budget_agent
-        → itinerary_agent → recommendation_agent → END
+
+START
+  ↓
+flight_agent
+  ↓
+hotel_agent
+  ↓
+budget_agent
+  ↓
+itinerary_agent
+  ↓
+recommendation_agent
+  ↓
+END
 """
 
 from __future__ import annotations
+
 import os
 from typing import Any, TypedDict
 
@@ -25,85 +38,163 @@ from agents.recommendation_agent import run_recommendation_agent
 load_dotenv()
 
 
-# ── Shared state schema ───────────────────────────────────────────────────────
+# ------------------------------------------------------------------
+# Shared State Schema
+# ------------------------------------------------------------------
 
 class TravelState(TypedDict, total=False):
-    # Inputs
-    source:           str
-    destination:    str
-    budget:         float
-    days:           int
-    travelers:      int
-    preferences:    list[str]
-    travel_dates:   str
+    """
+    Shared state passed between all LangGraph nodes.
+    """
 
-    # Agent outputs
-    flight_data:    dict
+    # --------------------------------------------------------------
+    # User Inputs
+    # --------------------------------------------------------------
+
+    source: str
+    destination: str
+
+    budget: float
+    days: int
+    travelers: int
+
+    preferences: list[str]
+    travel_dates: str
+
+    # --------------------------------------------------------------
+    # Flight Agent
+    # --------------------------------------------------------------
+
+    flight_data: dict
     flight_summary: str
-    hotel_data:     dict
-    hotel_summary:  str
+
+    # --------------------------------------------------------------
+    # Hotel Agent
+    # --------------------------------------------------------------
+
+    hotel_data: dict
+    hotel_summary: str
+
+    # --------------------------------------------------------------
+    # Budget Agent
+    # --------------------------------------------------------------
+
     budget_breakdown: dict
     budget_summary: str
-    itinerary:      str
+
+    # --------------------------------------------------------------
+    # Itinerary Agent
+    # --------------------------------------------------------------
+
+    itinerary: str
+
+    # --------------------------------------------------------------
+    # Recommendation Agent
+    # --------------------------------------------------------------
+
     recommendations: str
 
-    # Meta
-    error:          str | None
-    status:         str
+    # --------------------------------------------------------------
+    # Global Metadata
+    # --------------------------------------------------------------
+
+    currency: str
+
+    status: str
+    error: str | None
 
 
-# ── Graph builder ─────────────────────────────────────────────────────────────
+# ------------------------------------------------------------------
+# Graph Builder
+# ------------------------------------------------------------------
 
-def build_travel_graph() -> StateGraph:
+def build_travel_graph():
     """
-    Build and compile the LangGraph StateGraph for the travel planner.
-
-    Returns:
-        Compiled LangGraph app ready for .invoke() calls.
+    Build and compile LangGraph workflow.
     """
-    api_key = os.getenv("GROQ_API_KEY", "")
+
+    api_key = os.getenv("GROQ_API_KEY")
+
+    if not api_key:
+        raise ValueError(
+            "GROQ_API_KEY not found in environment variables."
+        )
+
     llm = ChatGroq(
         model="llama-3.3-70b-versatile",
         api_key=api_key,
-        temperature=0.7,
+        temperature=0.4,
         max_tokens=2048,
     )
 
     graph = StateGraph(TravelState)
 
-    # ── Node wrappers (inject llm via closure) ────────────────────────────────
+    # --------------------------------------------------------------
+    # Node Wrappers
+    # --------------------------------------------------------------
+
     def flight_node(state: TravelState) -> TravelState:
-        return run_flight_agent(state, llm)  # type: ignore[arg-type]
+        return run_flight_agent(state, llm)
 
     def hotel_node(state: TravelState) -> TravelState:
-        return run_hotel_agent(state, llm)  # type: ignore[arg-type]
+        return run_hotel_agent(state, llm)
 
     def budget_node(state: TravelState) -> TravelState:
-        return run_budget_agent(state, llm)  # type: ignore[arg-type]
+        return run_budget_agent(state, llm)
 
     def itinerary_node(state: TravelState) -> TravelState:
-        return run_itinerary_agent(state, llm)  # type: ignore[arg-type]
+        return run_itinerary_agent(state, llm)
 
     def recommendation_node(state: TravelState) -> TravelState:
-        return run_recommendation_agent(state, llm)  # type: ignore[arg-type]
+        return run_recommendation_agent(state, llm)
 
-    # ── Add nodes ─────────────────────────────────────────────────────────────
-    graph.add_node("flight_agent",         flight_node)
-    graph.add_node("hotel_agent",          hotel_node)
-    graph.add_node("budget_agent",         budget_node)
-    graph.add_node("itinerary_agent",      itinerary_node)
+    # --------------------------------------------------------------
+    # Register Nodes
+    # --------------------------------------------------------------
+
+    graph.add_node("flight_agent", flight_node)
+    graph.add_node("hotel_agent", hotel_node)
+    graph.add_node("budget_agent", budget_node)
+    graph.add_node("itinerary_agent", itinerary_node)
     graph.add_node("recommendation_agent", recommendation_node)
 
-    # ── Edges ─────────────────────────────────────────────────────────────────
-    graph.add_edge(START,                  "flight_agent")
-    graph.add_edge("flight_agent",         "hotel_agent")
-    graph.add_edge("hotel_agent",          "budget_agent")
-    graph.add_edge("budget_agent",         "itinerary_agent")
-    graph.add_edge("itinerary_agent",      "recommendation_agent")
-    graph.add_edge("recommendation_agent", END)
+    # --------------------------------------------------------------
+    # Workflow Edges
+    # --------------------------------------------------------------
+
+    graph.add_edge(START, "flight_agent")
+
+    graph.add_edge(
+        "flight_agent",
+        "hotel_agent",
+    )
+
+    graph.add_edge(
+        "hotel_agent",
+        "budget_agent",
+    )
+
+    graph.add_edge(
+        "budget_agent",
+        "itinerary_agent",
+    )
+
+    graph.add_edge(
+        "itinerary_agent",
+        "recommendation_agent",
+    )
+
+    graph.add_edge(
+        "recommendation_agent",
+        END,
+    )
 
     return graph.compile()
 
+
+# ------------------------------------------------------------------
+# Pipeline Runner
+# ------------------------------------------------------------------
 
 def run_travel_pipeline(
     source: str,
@@ -115,25 +206,34 @@ def run_travel_pipeline(
     travel_dates: str = "",
 ) -> dict[str, Any]:
     """
-    Convenience wrapper to run the full pipeline.
-
-    Returns:
-        Final state dict with all agent outputs.
+    Execute full travel planning workflow.
     """
+
     app = build_travel_graph()
 
     initial_state: TravelState = {
-        "source":       source,
-        "destination":  destination,
-        "budget":       budget,
-        "days":         days,
-        "travelers":    travelers,
-        "preferences":  preferences,
+        "source": source,
+        "destination": destination,
+        "budget": budget,
+        "days": days,
+        "travelers": travelers,
+        "preferences": preferences,
         "travel_dates": travel_dates,
-        "error":        None,
-        "status":       "running",
+        "status": "running",
+        "error": None,
     }
 
-    result = app.invoke(initial_state)
-    result["status"] = "completed"
-    return result
+    try:
+        result = app.invoke(initial_state)
+
+        result["status"] = "completed"
+
+        return result
+
+    except Exception as e:
+
+        return {
+            **initial_state,
+            "status": "failed",
+            "error": str(e),
+        }

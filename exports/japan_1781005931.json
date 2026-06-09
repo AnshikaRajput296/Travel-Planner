@@ -1,0 +1,15 @@
+{
+  "source": "Paris",
+  "destination": "Japan",
+  "budget": 400000.0,
+  "days": 5,
+  "travelers": 2,
+  "preferences": [
+    "Luxury",
+    "Family",
+    "Shopping"
+  ],
+  "travel_dates": "December 2026",
+  "status": "failed",
+  "error": "1 validation error for search_flights\nbudget_inr\n  Field required [type=missing, input_value={'source': 'Paris', 'dest...00000.0, 'travelers': 2}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing"
+}

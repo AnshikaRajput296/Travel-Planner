@@ -5,63 +5,199 @@ Flight Agent: estimates costs, suggests airlines, recommends travel times.
 """
 
 from __future__ import annotations
+
 from typing import Any
+
 from langchain_groq import ChatGroq
 from langchain_core.messages import HumanMessage, SystemMessage
 
 from tools.flight_tool import search_flights
 
 
-SYSTEM_PROMPT = """You are an expert flight booking assistant specializing in travel.
-Your job is to analyze flight options and provide accurate cost estimates and recommendations.
-Always respond in a structured, clear format. Focus on value for money and convenience.
-Provide specific airline names, approximate costs in given source place 
-(first identify country and give all cost in that specific country's currency), 
-and practical travel tips."""
+SYSTEM_PROMPT = """
+You are an expert flight booking assistant.
+
+Your responsibilities:
+
+1. Analyze flight options
+2. Recommend airlines
+3. Estimate realistic round-trip airfare
+4. Suggest booking windows
+5. Provide travel tips
+
+Always:
+- Use the currency of the source country
+- Mention airline recommendations
+- Mention layovers and duration
+- Mention baggage considerations
+- Keep response under 300 words
+"""
 
 
-def run_flight_agent(state: dict[str, Any], llm: ChatGroq) -> dict[str, Any]:
+# ------------------------------------------------------------------
+# Currency Detection
+# ------------------------------------------------------------------
+
+COUNTRY_CURRENCY = {
+    "india": "INR",
+    "usa": "USD",
+    "united states": "USD",
+    "uk": "GBP",
+    "united kingdom": "GBP",
+    "england": "GBP",
+    "canada": "CAD",
+    "australia": "AUD",
+    "japan": "JPY",
+    "singapore": "SGD",
+    "uae": "AED",
+    "dubai": "AED",
+    "france": "EUR",
+    "germany": "EUR",
+    "italy": "EUR",
+    "spain": "EUR",
+    "netherlands": "EUR",
+}
+
+
+def get_currency(source: str) -> str:
     """
-    Execute the Flight Agent node.
-
-    Uses the search_flights tool to get mock data, then calls the LLM
-    to produce a polished flight recommendation narrative.
-
-    Args:
-        state: Shared LangGraph state dict.
-        llm:   Configured ChatGroq instance.
-
-    Returns:
-        Updated state with 'flight_data' and 'flight_summary' keys.
+    Detect currency from source country.
     """
-    source      = state["source"]
+
+    source = source.lower()
+
+    for country, currency in COUNTRY_CURRENCY.items():
+        if country in source:
+            return currency
+
+    return "USD"
+
+
+# ------------------------------------------------------------------
+# Flight Agent
+# ------------------------------------------------------------------
+
+def run_flight_agent(
+    state: dict[str, Any],
+    llm: ChatGroq,
+) -> dict[str, Any]:
+    """
+    Execute Flight Agent node.
+
+    Inputs:
+        source
+        destination
+        budget
+        travelers
+        days
+
+    Outputs:
+        flight_data
+        flight_summary
+    """
+
+    source = state["source"]
     destination = state["destination"]
-    budget      = state["budget"]
-    travelers   = state["travelers"]
-    days        = state["days"]
+    budget = state["budget"]
+    travelers = state["travelers"]
+    days = state["days"]
 
-    # ── Tool call ────────────────────────────────────────────────────────────
-    flight_info = search_flights.invoke({
-        "source":source,
-        "destination": destination,
-        "budget_inr": budget,
-        "travelers": travelers,
-    })
+    currency = get_currency(source)
 
-    # ── LLM enrichment ───────────────────────────────────────────────────────
-    user_msg = (
-        f"Source: {source}\n"
-        f"Destination: {destination}\n"
-        f"Budget: ₹{budget:,.0f} for {travelers} traveler(s), {days} days\n"
-        f"Tool data: {flight_info}\n\n"
-        "Based on this data, provide:\n"
-        "1. Recommended airlines (2–3 options with pros/cons)\n"
-        "2. Estimated round-trip cost per person in INR\n"
-        "3. Best time to book and travel\n"
-        "4. Flight duration and layover tips\n"
-        "5. Baggage and comfort recommendations\n"
-        "Keep the response concise (under 300 words). Use ₹ for prices."
+    # --------------------------------------------------------------
+    # Flight Search Tool
+    # --------------------------------------------------------------
+
+    raw_flight_info = search_flights.invoke(
+        {
+            "source": source,
+            "destination": destination,
+            "budget": budget,
+            "travelers": travelers,
+        }
     )
+
+    # --------------------------------------------------------------
+    # Normalize Tool Output
+    # --------------------------------------------------------------
+
+    airlines = raw_flight_info.get(
+        "airlines",
+        [
+            "Singapore Airlines",
+            "Qatar Airways",
+            "Emirates",
+        ],
+    )
+
+    estimated_cost = raw_flight_info.get(
+        "total_cost",
+        raw_flight_info.get(
+            "estimated_cost",
+            budget * 0.35,
+        ),
+    )
+
+    duration = raw_flight_info.get(
+        "duration",
+        "8-12 hours",
+    )
+
+    layovers = raw_flight_info.get(
+        "layovers",
+        "1 stop",
+    )
+
+    booking_window = raw_flight_info.get(
+        "booking_window",
+        "6-8 weeks before departure",
+    )
+
+    flight_data = {
+        "source": source,
+        "destination": destination,
+        "currency": currency,
+        "airlines": airlines,
+        "total_cost": round(float(estimated_cost)),
+        "duration": duration,
+        "layovers": layovers,
+        "booking_window": booking_window,
+    }
+
+    # --------------------------------------------------------------
+    # LLM Analysis
+    # --------------------------------------------------------------
+
+    user_msg = f"""
+    Source:
+    {source}
+
+    Destination:
+    {destination}
+
+    Travelers:
+    {travelers}
+
+    Trip Duration:
+    {days} days
+
+    Budget:
+    {budget} {currency}
+
+    Flight Data:
+    {flight_data}
+
+    Provide:
+
+    1. Best airline options (2-3 choices)
+    2. Cost analysis
+    3. Best booking period
+    4. Layover recommendations
+    5. Baggage tips
+    6. Comfort vs value recommendation
+
+    Keep response under 300 words.
+    """
 
     messages = [
         SystemMessage(content=SYSTEM_PROMPT),
@@ -69,10 +205,9 @@ def run_flight_agent(state: dict[str, Any], llm: ChatGroq) -> dict[str, Any]:
     ]
 
     response = llm.invoke(messages)
-    summary  = response.content
 
     return {
         **state,
-        "flight_data": flight_info,
-        "flight_summary": summary,
+        "flight_data": flight_data,
+        "flight_summary": response.content,
     }
